@@ -21,7 +21,8 @@ export const getDeliveryDistribution = () =>
 
 export const getExportUrl = (params) => {
   const qs = new URLSearchParams(params).toString();
-  return `/api/export${qs ? `?${qs}` : ""}`;
+  const baseUrl = import.meta.env.VITE_API_URL || "/api";
+  return `${baseUrl}/export${qs ? `?${qs}` : ""}`;
 };
 
 export default api;
