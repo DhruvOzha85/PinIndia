@@ -49,7 +49,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile nav */}
-        <div className="flex md:hidden items-center gap-1">
+        <div className="flex md:hidden items-center gap-1 overflow-x-auto scrollbar-hide">
           {links.map((link) => (
             <NavLink
               key={link.to}

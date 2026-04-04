@@ -45,7 +45,7 @@ export default function FilterPanel({ filters, onChange }) {
   const handleClear = () => onChange({ state: "", district: "", taluk: "" });
 
   return (
-    <div className="card p-4 flex flex-col md:flex-row gap-3 items-end">
+    <div className="card p-4 flex flex-col md:flex-row gap-3 items-start md:items-end">
       {/* State */}
       <div className="flex-1 min-w-0">
         <label className="block text-xs font-mono mb-1.5 uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>

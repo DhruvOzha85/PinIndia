@@ -24,7 +24,7 @@ const stack = [
 
 export default function About() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
       {/* Header */}
       <div className="mb-12 animate-fade-up">
         <div className="flex items-center gap-2 mb-2">
