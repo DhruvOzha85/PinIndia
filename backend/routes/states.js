@@ -45,7 +45,7 @@ router.get("/:state/districts", async (req, res, next) => {
   try {
     const { state } = req.params;
     const districts = await Pincode.distinct("districtName", {
-      stateName: state.toUpperCase(),
+      stateName: new RegExp(`^${state}$`, "i"),
     });
     res.json(districts.filter(Boolean).sort());
   } catch (err) {
@@ -58,8 +58,8 @@ router.get("/:state/districts/:district/taluks", async (req, res, next) => {
   try {
     const { state, district } = req.params;
     const taluks = await Pincode.distinct("taluk", {
-      stateName: state.toUpperCase(),
-      districtName: district.toUpperCase(),
+      stateName: new RegExp(`^${state}$`, "i"),
+      districtName: new RegExp(`^${district}$`, "i"),
     });
     res.json(taluks.filter(Boolean).sort());
   } catch (err) {

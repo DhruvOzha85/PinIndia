@@ -8,9 +8,9 @@ router.get("/", async (req, res, next) => {
     const { state, district, taluk, page = 1, limit = 20 } = req.query;
     const filter = {};
 
-    if (state) filter.stateName = state.toUpperCase();
-    if (district) filter.districtName = district.toUpperCase();
-    if (taluk) filter.taluk = taluk.toUpperCase();
+    if (state) filter.stateName = new RegExp(`^${state}$`, "i");
+    if (district) filter.districtName = new RegExp(`^${district}$`, "i");
+    if (taluk) filter.taluk = new RegExp(`^${taluk}$`, "i");
 
     const skip = (parseInt(page) - 1) * parseInt(limit);
     const [data, total] = await Promise.all([
