@@ -4,7 +4,6 @@ const links = [
   { to: "/dashboard", label: "Dashboard" },
   { to: "/explore", label: "Explore" },
   { to: "/pincode", label: "PIN Lookup" },
-  { to: "/distance", label: "Distance" },
   { to: "/about", label: "About" },
 ];
 

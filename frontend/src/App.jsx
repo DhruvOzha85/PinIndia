@@ -5,7 +5,6 @@ import PageTransition from "./components/PageTransition";
 import Dashboard from "./pages/Dashboard";
 import Explore from "./pages/Explore";
 import PincodeLookup from "./pages/PincodeLookup";
-import DistanceCalculator from "./pages/DistanceCalculator";
 import About from "./pages/About";
 
 function AnimatedRoutes() {
@@ -18,7 +17,6 @@ function AnimatedRoutes() {
         <Route path="/dashboard" element={<PageTransition><Dashboard /></PageTransition>} />
         <Route path="/explore" element={<PageTransition><Explore /></PageTransition>} />
         <Route path="/pincode" element={<PageTransition><PincodeLookup /></PageTransition>} />
-        <Route path="/distance" element={<PageTransition><DistanceCalculator /></PageTransition>} />
         <Route path="/about" element={<PageTransition><About /></PageTransition>} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
