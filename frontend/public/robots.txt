@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pin-india.vercel.app/Sitemap.xml
